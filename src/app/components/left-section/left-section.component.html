@@ -1,0 +1,45 @@
+<div class="p-2 grid grid-cols-16">
+  <h1 class="font-bold col-span-3">{{ module.name }}</h1>
+  <p class="col-span-13 text-center font-normal">
+    Browse All {{ module.name }}
+  </p>
+  <div class="col-span-16 grid grid-cols-3 gap-2">
+    <div class="col-span-2 grid grid-cols-2 grid-rows-3 gap-2">
+      <div
+        *ngFor="let child of content; let i = index"
+        [ngClass]="
+          i < 1
+            ? 'col-span-2 row-span-2 content__Card aspect-video'
+            : i < 3
+            ? 'col-span-1 row-span-1 content__Card bottom aspect-square'
+            : 'hidden'
+        "
+      >
+        <div class="image">
+          <img class="w-full h-full" src="{{ child.image }}" alt="" />
+        </div>
+        <div class="caption">
+          <p>{{ child.title }}</p>
+          <p>{{ child.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-1 grid grid-rows-3 gap-1">
+      <div
+        *ngFor="let child of content; let i = index"
+        [ngClass]="
+          i > 2 && i <= 5 ? 'grid-rows-1 content__Card aspect-square' : 'hidden'
+        "
+      >
+        <div class="image">
+          <img class="w-full h-full" src="{{ child.image }}" alt="" />
+        </div>
+        <div class="caption">
+          <p>{{ child.title }}</p>
+          <p>{{ child.subtitle }}</p>
+        </div>
+      </div>
+      <div *ngIf="content.length > 4 ? 'grid-rows-1' : 'hidden'">See-More</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="activity__Widget w-full font-[12px]">
+  <div class="header flex flex-row justify-between">
+    <h1 class="flex-1 mr-2 font-bold">Activity</h1>
+    <div class="flex flex-row flex-end">
+      <p class="mr-3">View Timeline</p>
+      <p>Filter Activities</p>
+    </div>
+  </div>
+  <div class="separator border-red border-[2px]"></div>
+  <div class="content w-full">
+    <div class="columns-1 w-full gap-2">
+      <div
+        *ngFor="let val of activity; let i = index"
+        [ngClass]="
+          'w-full grid grid-cols-12 ' +
+          (i == 0 ? '' : 'mt-2') +
+          ' ' +
+          (i == activity.length - 1 ? 'mb-2' : '')
+        "
+      >
+        <div
+          class="col-span-3"
+          style="background-image: url('https://subiakto.com/wp-content/uploads/2015/12/Google.jpg');background-repeat: no-repeat; background-size: contain; min-height: 50px; width: 100%"
+        ></div>
+        <div class="col-span-9 flex flex-col">
+          <div class="flex flex-row" style="font-size: 14px">
+            <span class="font-bold mr-2" style="font-size: 16px"
+              >John Stainor</span
+            >Commented
+          </div>
+          <p style="font-size: 12px">Well I'm Liking</p>
+          <p style="font-size: 10px">11 Minutes Ago</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator"></div>
+</div>

@@ -1,0 +1,73 @@
+<div class="activity__Widget w-full font-[12px]">
+  <div class="header flex flex-row justify-between">
+    <h1 class="flex-1 mr-2 font-bold">Channels</h1>
+    <div class="flex flex-row flex-end">
+      <p>Browse All Channels</p>
+    </div>
+  </div>
+  <div class="separator border-red border-[2px]"></div>
+  <div class="content w-full mt-4 mb-4">
+    <div class="grid xs:grid-cols-6 md:grid-cols-12 w-full gap-5">
+      <div
+        *ngFor="let val of channels; let i = index"
+        [ngClass]="'w-full col-span-6 relative'"
+      >
+        <!-- <div
+          class="w-full aspect-square channel__Image"
+          style="background-image: url('https://subiakto.com/wp-content/uploads/2015/12/Google.jpg');background-repeat: no-repeat; background-size: contain; min-height: 100px; min-width: 150px"
+        ></div>
+        <div class="px-4 py-4 w-full absolute bottom-0 channel__username">
+          username
+        </div> -->
+
+        <div
+          class="
+            max-w-sm
+            bg-white
+            border border-gray-200
+            rounded-lg
+            shadow-md
+            dark:bg-gray-800 dark:border-gray-700
+            overflow-hidden
+          "
+        >
+          <div class="corner-triangle">
+            <div
+              class="
+                text-capitalize
+                xs:corner-triangle-text-mobile
+                md:corner-triangle-text
+              "
+            >
+              <a href="http://shop.mimijumi.com/" target="_blank">x</a>
+            </div>
+          </div>
+          <a href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://subiakto.com/wp-content/uploads/2015/12/Google.jpg"
+              alt=""
+            />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5
+                class="
+                  mb-2
+                  text-md
+                  font-semibold
+                  tracking-tight
+                  text-gray-900
+                  dark:text-white
+                "
+              >
+                Noteworthy technology acquisitions 2021
+              </h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator"></div>
+</div>

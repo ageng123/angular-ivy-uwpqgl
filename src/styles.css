@@ -1,0 +1,66 @@
+/* Add application styles & imports to this file! */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.search__Bar {
+  background: transparent;
+}
+.search__Bar::placeholder {
+  color: #fff;
+}
+.grid-cols-16 {
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+.col-span-13 {
+  grid-column: span 13 / span 13;
+}
+.col-span-16 {
+  grid-column: span 16 / span 16;
+}
+.search__Bar:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.search__bar:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.content__Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: #21212125;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.content__Card:nth-child(1) {
+  margin-top: 1.2rem;
+}
+.content__Card:nth-child(4) {
+  margin-top: 1.2rem;
+}
+.content__Card .image {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+.content__Card .caption {
+  background-color: #21212110;
+  position: relative;
+  top: -3rem;
+  bottom: 0;
+}
+.activity__Widget .separator {
+  border-bottom: 2px Solid #742a2a;
+  margin-top: 0.2rem;
+}

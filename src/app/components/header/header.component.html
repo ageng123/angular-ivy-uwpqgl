@@ -1,0 +1,24 @@
+<div class="flex flex-row w-full bg-red-900 text-white justify-between p-6">
+  <div class="font-normal flex flex-1 text-[32px] px-2">
+    <h1 class="text-4xl"><span class="font-bold">Social</span>Name</h1>
+  </div>
+  <input
+    placeholder="find"
+    class="ml-4 flex-1 flex px-6 bg-transparent search__Bar"
+  />
+  <button class="px-6 flex-2 py-1 bg-red-400 rounded text-black">Upload</button>
+  <div class="flex-2 px-6 py-4 flex flex-row justify-center items-center">
+    <img src="https://source.unsplash.org/random" class="mr-4" />
+    <div>Yaseem Akhmad</div>
+  </div>
+</div>
+<div class="bg-red-700 w-full">
+  <ul class="flex flex-row px-2 py-6 pl-8">
+    <li
+      *ngFor="let nav of navLinks"
+      class="mr-6 text-l font-semibold text-white"
+    >
+      {{ nav.title }}
+    </li>
+  </ul>
+</div>
