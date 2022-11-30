@@ -17,11 +17,12 @@ export class HeaderComponent implements OnInit {
     { title: 'Favourites' },
     { title: 'Channels' },
   ];
+  showNav = false;
   navigation = (navTitle: string) => {
     alert(navTitle)
   }
   toggleNav = () => {
-    alert('toggled');
+    this.showNav = !this.showNav;
   }
 
   ngOnInit() {}
