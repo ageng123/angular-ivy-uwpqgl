@@ -1,4 +1,4 @@
-<div class="activity__Widget w-full font-[12px]">
+<div class=" w-full font-[12px]">
   <div class="header flex flex-row justify-between">
     <h1 class="flex-1 mr-2 font-bold">Channels</h1>
     <div class="flex flex-row flex-end">
@@ -7,7 +7,7 @@
   </div>
   <div class="separator border-red border-[2px]"></div>
   <div class="content w-full mt-4 mb-4">
-    <div class="grid grid-cols-6 md:grid-cols-12 w-full gap-5">
+    <div class="grid xs:grid-cols-6 md:grid-cols-12 w-full gap-5">
       <div
         *ngFor="let val of channels; let i = index"
         [ngClass]="'w-full col-span-6 relative'"
@@ -29,17 +29,14 @@
             shadow-md
             dark:bg-gray-800 dark:border-gray-700
             overflow-hidden
+            channel__Widget
           "
         >
           <div class="corner-triangle">
             <div
-              class="
-                text-capitalize
-                sm:corner-triangle-text-mobile
-                md:corner-triangle-text
-              "
+              class="text-capitalize corner-triangle-text-mobile ml-[6.8rem] md:ml-[10rem] xl:ml-[12.8rem]"
             >
-              <a href="http://shop.mimijumi.com/" target="_blank">x</a>
+              <a href="" target="_blank">+</a>
             </div>
           </div>
           <a href="#">

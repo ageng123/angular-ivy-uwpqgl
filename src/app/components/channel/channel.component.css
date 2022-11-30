@@ -7,6 +7,11 @@
   border-style: solid;
   border-color: #21212150;
 }
+.channel__Widget:hover .corner-triangle{
+  /* visibility:visible; */
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
 .corner-triangle {
   border-color: transparent #da0039 transparent transparent;
   position: relative;
@@ -20,12 +25,13 @@
   z-index: 99999;
   top: -20px;
   right: 0;
-  display: block;
+  visibility:hidden;
+ 
 }
 .corner-triangle .corner-triangle-text {
   right: -7.4rem;
-  color: white;
-  position: relative;
+  color: black;
+  position: absolute;
   top: 20px;
   font-weight: 500;
 }
@@ -35,4 +41,14 @@
   position: relative;
   top: 20px;
   font-weight: 500;
+}
+@keyframes fadeIn {
+  25% {
+    visibility: hidden;
+    opacity: 0.1;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }

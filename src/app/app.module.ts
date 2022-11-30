@@ -11,6 +11,7 @@ import {
   ActivityComponent,
   ChannelComponent,
 } from './components';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -22,6 +23,7 @@ import {
     LeftSectionComponent,
     ActivityComponent,
     ChannelComponent,
+    FooterComponent,
   ],
   bootstrap: [AppComponent],
 })

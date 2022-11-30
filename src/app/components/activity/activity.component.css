@@ -1,0 +1,24 @@
+.activity__Detail:hover > .activity__Action{
+    visibility: visible;
+    animation: 1s slideIn;
+    animation-fill-mode: forwards;
+
+}
+.activity__Action{
+    visibility: hidden;
+}
+
+@keyframes slideIn{
+    0%{
+        visibility: hidden;
+        opacity: .1;
+    }
+    50%{
+        visibility: visible;
+        opacity: 0.5;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}

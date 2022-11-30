@@ -37,6 +37,6 @@ export class LeftSectionComponent implements OnInit {
   @Input() module: any;
 
   ngOnInit() {
-    console.log(this.module.name);
+    this.content = this.module.child ? this.module.child : [];
   }
 }
